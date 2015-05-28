@@ -5,6 +5,7 @@ let doc = [%xtmpl "tmpl/doc.html"]
 let download = [%xtmpl "tmpl/download.html"]
 let first_post = [%xtmpl "tmpl/posts/first-post.html"]
 let index = [%xtmpl "tmpl/index.html"]
+let release_0_1_0 = [%xtmpl "tmpl/posts/release-0.1.0.html"]
 
 (*c==v=[File.file_of_string]=1.1====*)
 let file_of_string ~file s =
@@ -30,9 +31,10 @@ let generate ~outdir ~sw_name =
       about (), "about.html" ;
       blog ~sw_name (), "blog.html" ;
       doc (), "doc.html" ;
-      download (), "download.html" ;
+      download ~sw_name (), "download.html" ;
       first_post (), "posts/first-post.html" ;
       index ~sw_name (), "index.html" ;
+      release_0_1_0 ~sw_name (), "posts/release-0.1.0.html" ;
     ]
   in
   List.iter

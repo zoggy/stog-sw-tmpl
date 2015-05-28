@@ -30,6 +30,9 @@ $(STOG_SW_TMPL): $(CMIFILES) $(CMXFILES)
 $(STOG_SW_TMPL_BYTE): $(CMIFILES) $(CMOFILES)
 	$(OCAMLFIND) ocamlc -o $@ -linkpkg -package $(PACKAGES) $(CMOFILES)
 
+TMPL_FILES:=$(shell find tmpl -name "*html")
+stog_sw_tmpl.cmx: $(TMPL_FILES)
+stog_sw_tmpl.cmo: $(TMPL_FILES)
 %.cmx: %.ml %.cmi
 	$(OCAMLFIND) ocamlopt -c -package $(PACKAGES) $(COMPFLAGS) $<
 
