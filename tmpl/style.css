@@ -58,17 +58,17 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   margin-top: 0.4162em; }
 
-.section {
+.section-title {
   font-size: 1.602em;
   line-height: 0.93633em;
   margin-bottom: 0.93633em; }
 
-.subsection {
+.subsection-title {
   font-size: 1.424em;
   line-height: 1.05337em;
   margin-bottom: 1.05337em; }
 
-.subsubsection {
+.subsubsection-title {
   font-size: 1.266em;
   line-height: 1.18483em;
   margin-bottom: 1.18483em; }
@@ -77,6 +77,23 @@ p {
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 21px; }
+
+.navbar {
+  margin: 0;
+  padding: 0.2em;
+  height: 2em;
+  color: #33a;
+  background-color: #a33;
+  margin-bottom: 21px; }
+
+.navbar-inner {
+  paddding-left: 20px;
+  paddding-right: 20px; }
+  .navbar-inner > ul {
+    list-style: outside none none;
+    display: block; }
+    .navbar-inner > ul > li {
+      float: left; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -101,10 +118,6 @@ h3 {
   line-height: 1.18483em;
   margin-bottom: 1.18483em; }
 
-.dynamow-plot-box {
-  max-width: 80%;
-  width: 500px; }
-
 body {
   background-color: #efefef; }
 
@@ -112,22 +125,12 @@ body {
   background-color: #ffffff;
   max-width: 800px;
   margin-top: 0;
-  padding: 1em;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-color: #333; }
 
-.fade_out {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.1s, opacity 0.1s linear; }
-
-.fade_in {
-  visibility: visible;
-  opacity: 100%;
-  transition: opacity 0.3s linear; }
-
-span.cas-code {
-  display: none; }
+#page-body {
+  padding: 1em; }

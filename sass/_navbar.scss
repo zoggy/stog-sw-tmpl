@@ -1,0 +1,24 @@
+
+
+.navbar {
+  margin: 0;
+  padding: 0.2em ;
+  height: $navbar-height ;
+  color: $navbar-foreground ;
+  background-color: $navbar-background ;
+  margin-bottom: $base-line-height ;
+
+}
+
+.navbar-inner {
+  paddding-left: $navbar-inner-side-padding;
+  paddding-right: $navbar-inner-side-padding;
+
+  > ul {
+    list-style: outside none none ;
+    display: block ;
+    > li {
+      float: left
+    }
+  }
+}
