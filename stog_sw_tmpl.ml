@@ -1,4 +1,9 @@
 
+let about = [%xtmpl "tmpl/about.html"]
+let blog = [%xtmpl "tmpl/blog.html"]
+let doc = [%xtmpl "tmpl/doc.html"]
+let download = [%xtmpl "tmpl/download.html"]
+let first_post = [%xtmpl "tmpl/posts/first-post.html"]
 let index = [%xtmpl "tmpl/index.html"]
 
 (*c==v=[File.file_of_string]=1.1====*)
@@ -8,14 +13,26 @@ let file_of_string ~file s =
   close_out oc
 (*/c==v=[File.file_of_string]=1.1====*)
 
+let mkdir s =
+  let qs = Filename.quote s in
+  match Sys.command (Printf.sprintf "mkdir -p %s" qs) with
+    0 -> ()
+  | n -> failwith (Printf.sprintf "Could not create directory %s" qs)
+
 let gen_file ~outdir xmls path =
   let file = Filename.concat outdir path in
+  mkdir (Filename.dirname file) ;
   file_of_string ~file (Xtmpl.string_of_xmls xmls)
 
 let generate ~outdir ~sw_name =
   let files =
-    [ index ~sw_name (), "index.html" ;
-
+    [
+      about (), "about.html" ;
+      blog ~sw_name (), "blog.html" ;
+      doc (), "doc.html" ;
+      download (), "download.html" ;
+      first_post (), "posts/first-post.html" ;
+      index ~sw_name (), "index.html" ;
     ]
   in
   List.iter
@@ -29,7 +46,7 @@ let name = ref "Mysoftware"
 
 let options = [
   "--templates", Arg.Unit print_templates, " print templates directory and exit";
-  "--modules", Arg.Unit print_templates, " print modules directory and exit";
+  "--modules", Arg.Unit print_modules, " print modules directory and exit";
   "-d", Arg.Set_string outdir, "<dir> output to <dir> instead of current directory" ;
   "-n", Arg.Set_string name, "<name> set name of the software in the generated files" ;
   ]

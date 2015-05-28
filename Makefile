@@ -39,6 +39,10 @@ $(STOG_SW_TMPL_BYTE): $(CMIFILES) $(CMOFILES)
 %.cmi: %.mli
 	$(OCAMLFIND) ocamlc -c -package $(PACKAGES) $(COMPFLAGS) $<
 
+######
+clean:
+	$(RM) *.cm* *.o *.a *.annot $(STOG_SW_TMPL) $(STOG_SW_TMPL_BYTE)
+
 ##########
 install: all
 	$(OCAMLFIND) install $(PACKAGE) META LICENSE \

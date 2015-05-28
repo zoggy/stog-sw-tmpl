@@ -2,19 +2,19 @@
 <head>
 <title><site-title/> : <doc-title/></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="&lt;site-url/&gt;/style.css"></link>
-<link rel="alternate" type="application/rss+xml" title="Rss feed" href="/news.rss" />
+<link rel="alternate" type="application/rss+xml" title="Rss feed" href="/&lt;site-url/&gt;/news.rss" />
 </head>
 <body>
 <div id="page">
-<include file="menubar.tmpl"/>
+<include file="sw-menubar.tmpl"/>
 <div id="header">
 <if doc-type="ocamldoc"><main_/><div class="page-title"><doc-title/></div></if>
 </div>
-<if doc-type="post"><div class="date"><doc-date/></div></if>
+<if doc-type="sw-post"><div class="date"><doc-date/></div></if>
 
 <doc-body/>
 
-<if doc-type="post">
+<if doc-type="sw-post">
 <div class="doc-keywords">
   <div class="bloc-keywords">
   Topics: <div class="keywords"><doc-topics sep=", "/></div>
@@ -22,7 +22,6 @@
   <div class="bloc-keywords">
   Keywords: <div class="keywords"><doc-keywords sep=", "/></div>
   </div>
-</div>
 </div>
 </if>
 </div>
