@@ -4,7 +4,7 @@ PACKAGE=stog-sw-tmpl
 VERSION=0.1.0
 
 OCAMLFIND=ocamlfind
-PACKAGES=stog
+PACKAGES=stog,ppx_blob
 COMPFLAGS=-annot -rectypes -safe-string -g
 OCAMLPP=
 OCAMLLIB:=`$(OCAMLC) -where`
@@ -30,7 +30,7 @@ $(STOG_SW_TMPL): $(CMIFILES) $(CMXFILES)
 $(STOG_SW_TMPL_BYTE): $(CMIFILES) $(CMOFILES)
 	$(OCAMLFIND) ocamlc -o $@ -linkpkg -package $(PACKAGES) $(CMOFILES)
 
-TMPL_FILES:=$(shell find tmpl -name "*html")
+TMPL_FILES:=$(shell find tmpl -name "*html") tmpl/Makefile
 stog_sw_tmpl.cmx: $(TMPL_FILES)
 stog_sw_tmpl.cmo: $(TMPL_FILES)
 %.cmx: %.ml %.cmi
@@ -41,6 +41,9 @@ stog_sw_tmpl.cmo: $(TMPL_FILES)
 
 %.cmi: %.mli
 	$(OCAMLFIND) ocamlc -c -package $(PACKAGES) $(COMPFLAGS) $<
+
+style:
+	sass sass/style.scss > tmpl/style.css
 
 ######
 clean:

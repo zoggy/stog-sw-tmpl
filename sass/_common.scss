@@ -1,0 +1,18 @@
+/* Common partial files */
+
+@import "funs";
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "alerts";
+@import "sectionning";
+@import "typeset";
+
+body {
+ font-family: $base-font-family ;
+ font-size: $base-font-size ;
+ color: $base-text-color;
+ margin-left: 1em;
+ margin-right: 1em;
+ margin-bottom: 1em;
+}

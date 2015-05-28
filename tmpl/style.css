@@ -1,0 +1,133 @@
+/* stylesheet for webapp demo */
+/* Common partial files */
+/* from https://gist.github.com/moyarich/3260638 */
+/* reset properties */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* variables */
+/* Modular Scale from http://modularscale.com/scale/?px1=14&px2=&ra1=1.125&ra2=0
+        ----------------------
+        14px @ 1:1.125
+        ----------------------*/
+/* mixins */
+/* flex layout */
+/* alerts */
+.alert, .aler-warning, .alert-success, .alert-danger,
+.alert-error, .alert-info {
+  padding: 8px 35px 8px 14px;
+  margin: 0.5em;
+  margin-bottom: 21px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #efebd7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px; }
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d3e4cd;
+  color: #468847; }
+
+.alert-danger,
+.alert-error {
+  background-color: #f2dede;
+  border-color: #e5d2d2;
+  color: #b94a48; }
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #cee1ea;
+  color: #3a87ad; }
+
+.page-title {
+  font-size: 1.802em;
+  line-height: 0.83241em;
+  margin-bottom: 0.83241em;
+  text-align: center;
+  margin-top: 0.4162em; }
+
+.section {
+  font-size: 1.602em;
+  line-height: 0.93633em;
+  margin-bottom: 0.93633em; }
+
+.subsection {
+  font-size: 1.424em;
+  line-height: 1.05337em;
+  margin-bottom: 1.05337em; }
+
+.subsubsection {
+  font-size: 1.266em;
+  line-height: 1.18483em;
+  margin-bottom: 1.18483em; }
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 21px; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em; }
+
+h1 {
+  font-size: 1.602em;
+  line-height: 0.93633em;
+  margin-bottom: 0.93633em; }
+
+h2 {
+  font-size: 1.424em;
+  line-height: 1.05337em;
+  margin-bottom: 1.05337em; }
+
+h3 {
+  font-size: 1.266em;
+  line-height: 1.18483em;
+  margin-bottom: 1.18483em; }
+
+.dynamow-plot-box {
+  max-width: 80%;
+  width: 500px; }
+
+body {
+  background-color: #efefef; }
+
+#page {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin-top: 0;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-color: #333; }
+
+.fade_out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.1s, opacity 0.1s linear; }
+
+.fade_in {
+  visibility: visible;
+  opacity: 100%;
+  transition: opacity 0.3s linear; }
+
+span.cas-code {
+  display: none; }

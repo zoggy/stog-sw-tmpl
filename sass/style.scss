@@ -1,0 +1,55 @@
+/* stylesheet for webapp demo */
+
+@import "common";
+
+h1 {
+  font-size: $section-title-font-size ;
+  line-height: $section-title-line-height ;
+  margin-bottom: $section-title-margin-bottom ;
+}
+h2 {
+  font-size: $subsection-title-font-size ;
+  line-height: $subsection-title-line-height ;
+  margin-bottom: $subsection-title-margin-bottom ;
+}
+h3 {
+  font-size: $subsubsection-title-font-size ;
+  line-height: $subsubsection-title-line-height ;
+  margin-bottom: $subsubsection-title-margin-bottom ;
+}
+
+.dynamow-plot-box {
+  max-width: 80%;
+  width: 500px;
+}
+
+body {
+  background-color: #efefef;
+}
+#page {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin-top: 0;
+  padding: 1em;
+  margin-left: auto ;
+  margin-right: auto ;
+  border-style: solid ;
+  border-width: 0 1px 1px 1px ;
+  border-color: $base-text-color ;
+}
+
+.fade_out {
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s 0.1s, opacity 0.1s linear;
+}
+
+.fade_in {
+   visibility: visible;
+   opacity: 100%;
+   transition: opacity 0.3s linear ;
+}
+
+span.cas-code {
+  display: none ;
+}

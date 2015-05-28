@@ -5,14 +5,15 @@ let doc = [%xtmpl "tmpl/doc.html"]
 let download = [%xtmpl "tmpl/download.html"]
 let first_post = [%xtmpl "tmpl/posts/first-post.html"]
 let index = [%xtmpl "tmpl/index.html"]
+let makefile = [%blob "tmpl/Makefile"]
 let release_0_1_0 = [%xtmpl "tmpl/posts/release-0.1.0.html"]
+let rss_png = [%blob "tmpl/rss.png"]
+let style_css = [%blob "tmpl/style.css"]
 
-(*c==v=[File.file_of_string]=1.1====*)
 let file_of_string ~file s =
-  let oc = open_out file in
+  let oc = open_out_bin file in
   output_string oc s;
   close_out oc
-(*/c==v=[File.file_of_string]=1.1====*)
 
 let mkdir s =
   let qs = Filename.quote s in
@@ -20,21 +21,29 @@ let mkdir s =
     0 -> ()
   | n -> failwith (Printf.sprintf "Could not create directory %s" qs)
 
-let gen_file ~outdir xmls path =
+let gen_file ~outdir content path =
   let file = Filename.concat outdir path in
   mkdir (Filename.dirname file) ;
-  file_of_string ~file (Xtmpl.string_of_xmls xmls)
+  let str =
+    match content with
+      `Xml xmls -> Xtmpl.string_of_xmls xmls
+    | `Text s -> s
+  in
+  file_of_string ~file str
 
 let generate ~outdir ~sw_name =
   let files =
     [
-      about (), "about.html" ;
-      blog ~sw_name (), "blog.html" ;
-      doc (), "doc.html" ;
-      download ~sw_name (), "download.html" ;
-      first_post (), "posts/first-post.html" ;
-      index ~sw_name (), "index.html" ;
-      release_0_1_0 ~sw_name (), "posts/release-0.1.0.html" ;
+      `Xml (about ()), "about.html" ;
+      `Xml (blog ~sw_name ()), "blog.html" ;
+      `Xml (doc ()), "doc.html" ;
+      `Xml (download ~sw_name ()), "download.html" ;
+      `Xml (first_post ()), "posts/first-post.html" ;
+      `Xml (index ~sw_name ()), "index.html" ;
+      `Text makefile, "Makefile" ;
+      `Xml (release_0_1_0 ~sw_name ()), "posts/release-0.1.0.html" ;
+      `Text rss_png, "rss.png" ;
+      `Text style_css, "style.css" ;
     ]
   in
   List.iter
