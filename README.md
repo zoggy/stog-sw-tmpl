@@ -25,8 +25,9 @@ generated files to add content for your site.
 ````
 $ mkdir dir
 $ cd dir
-$ stog-sw-tmpl # beware this generates files in the current directory
-               # but you can use -d to output files somewhere else
+$ ocamlfind stog-sw-tmpl/stog-sw-tmpl
+    # beware this generates files in the current directory
+    # but you can use -d to output files somewhere else
 $ tree
 |-- about.html
 |-- blog.html
