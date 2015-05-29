@@ -31,7 +31,7 @@ $(STOG):
 	$(MKSTOG) -o $@ -package $(PACKAGES) -linkall
 
 $(STOG_SERVER):
-	$(MKSTOG) -o $@ -package stog.server,$(PACKAGES) -linkall
+	$(MKSTOG) -o $@ -package stog.server,$(PACKAGES) -thread -linkall
 
 $(STOG_OCAML_SESSION):
 	$(MKSTOG_OCAML_SESSION) -o $@
