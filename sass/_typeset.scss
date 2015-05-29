@@ -29,7 +29,7 @@ ul {
 p + ul {
   margin-top: - ($base-line-height / 2) ;
 }
-pre, code {
+pre {
   @include border-radius(3px);
   padding-left: 0.5em;
   border-width: 0 0 0 2px;
@@ -41,7 +41,13 @@ pre, code {
   word-break: break-all;
   line-height: 1.5em;
 }
-
+code {
+  @include border-radius(3px);
+  color: $code-color ;
+  background-color: $code-background ;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
 .rss-button { float: right ; }
 .ext-a {
   padding-right: 12px;

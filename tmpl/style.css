@@ -139,7 +139,7 @@ ul {
 p + ul {
   margin-top: -10.5px; }
 
-pre, code {
+pre {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -153,6 +153,16 @@ pre, code {
   white-space: pre-wrap;
   word-break: break-all;
   line-height: 1.5em; }
+
+code {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  background-color: #eeeeee;
+  white-space: pre-wrap;
+  word-break: break-all; }
 
 .rss-button {
   float: right; }
