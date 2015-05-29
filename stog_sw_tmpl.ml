@@ -6,6 +6,7 @@ let download = [%xtmpl "tmpl/download.html"]
 let first_post = [%xtmpl "tmpl/posts/first-post.html"]
 let index = [%xtmpl "tmpl/index.html"]
 let makefile = [%blob "tmpl/Makefile"]
+let next = [%blob "tmpl/next.png"]
 let release_0_1_0 = [%xtmpl "tmpl/posts/release-0.1.0.html"]
 let rss_png = [%blob "tmpl/rss.png"]
 let style_css = [%blob "tmpl/style.css"]
@@ -41,6 +42,7 @@ let generate ~outdir ~sw_name =
       `Xml (first_post ()), "posts/first-post.html" ;
       `Xml (index ~sw_name ()), "index.html" ;
       `Text makefile, "Makefile" ;
+      `Text next, "next.png" ;
       `Xml (release_0_1_0 ~sw_name ()), "posts/release-0.1.0.html" ;
       `Text rss_png, "rss.png" ;
       `Text style_css, "style.css" ;

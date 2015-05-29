@@ -9,6 +9,14 @@
 
 /* flex layout */
 
+@mixin rounded-box($border,$bg) {
+  @include border-radius(3px);
+  border-width: 1px;
+  border-style: solid ;
+  border-color: $border;
+  background-color: $bg ;
+}
+
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
