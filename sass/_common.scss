@@ -18,3 +18,16 @@ body {
  margin-right: 1em;
  margin-bottom: 1em;
 }
+
+.ocamldoc-page {
+  .navbar {
+    background: transparent ;
+    margin-top: -1.5em;
+    height: auto ;
+    margin-bottom: 0.5em;
+  }
+  > div + br { display: none ; }
+/*  br { height: 0 ; line-height: 0; display: none }*/
+  @import "ocamldoc";
+
+}
