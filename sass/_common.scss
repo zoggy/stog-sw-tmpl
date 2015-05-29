@@ -27,6 +27,9 @@ body {
     margin-bottom: 0.5em;
   }
   > div + br { display: none ; }
+  > .section-title { margin-top: 1em; }
+  > .subsection-title { margin-top: 1em; }
+  > .subsubsection-title { margin-top: 1em; }
 /*  br { height: 0 ; line-height: 0; display: none }*/
   @import "ocamldoc";
 

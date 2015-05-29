@@ -311,6 +311,12 @@ body {
     margin-bottom: 0.5em; }
   .ocamldoc-page > div + br {
     display: none; }
+  .ocamldoc-page > .section-title {
+    margin-top: 1em; }
+  .ocamldoc-page > .subsection-title {
+    margin-top: 1em; }
+  .ocamldoc-page > .subsubsection-title {
+    margin-top: 1em; }
   .ocamldoc-page img.depgraph {
     border-width: 0px; }
   .ocamldoc-page .keyword {
@@ -335,7 +341,8 @@ body {
     font-weight: bold; }
   .ocamldoc-page .info {
     margin-left: 3em;
-    margin-right: 3em; }
+    margin-right: 3em;
+    margin-bottom: 1.5em; }
   .ocamldoc-page .param_info {
     margin-top: 4px;
     margin-left: 4.5em;
