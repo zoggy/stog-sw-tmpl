@@ -157,6 +157,12 @@ pre, .code {
 .rss-button {
   float: right; }
 
+.ext-a {
+  padding-right: 12px;
+  background-image: url("extlink.png");
+  background-repeat: no-repeat;
+  background-position: right; }
+
 .navbar {
   margin: 0;
   padding: 0;
