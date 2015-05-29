@@ -3,9 +3,10 @@ let about = [%xtmpl "tmpl/about.html"]
 let blog = [%xtmpl "tmpl/blog.html"]
 let doc = [%xtmpl "tmpl/doc.html"]
 let download = [%xtmpl "tmpl/download.html"]
+let extlink = [%blob "tmpl/extlink.png"]
 let first_post = [%xtmpl "tmpl/posts/first-post.html"]
-let index = [%xtmpl "tmpl/index.html"]
 let makefile = [%blob "tmpl/Makefile"]
+let index = [%xtmpl "tmpl/index.html"]
 let next = [%blob "tmpl/next.png"]
 let release_0_1_0 = [%xtmpl "tmpl/posts/release-0.1.0.html"]
 let rss_png = [%blob "tmpl/rss.png"]
@@ -39,6 +40,7 @@ let generate ~outdir ~sw_name =
       `Xml (blog ~sw_name ()), "blog.html" ;
       `Xml (doc ()), "doc.html" ;
       `Xml (download ~sw_name ()), "download.html" ;
+      `Text extlink, "extlink.png" ;
       `Xml (first_post ()), "posts/first-post.html" ;
       `Xml (index ~sw_name ()), "index.html" ;
       `Text makefile, "Makefile" ;

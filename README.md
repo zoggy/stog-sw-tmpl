@@ -4,7 +4,8 @@ Generate [Stog](https://zoggy.github.io/stog/) files for a software static web s
 
 ## Compilation and installation
 
-You need Stog >= 0.14.0 to be installed.
+You need [Stog](https://zoggy.github.io/stog/) >= 0.14.0 to be installed
+and [ppx_blob](https://github.com/johnwhitington/ppx_blob)
 
 ````
 $ git clone https://github.com/zoggy/stog-sw-tmpl.git
