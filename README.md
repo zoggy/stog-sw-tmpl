@@ -1,6 +1,6 @@
 # stog-sw-tmpl
 
-Generate Stog files for a software static web site.
+Generate [Stog](https://zoggy.github.io/stog/) files for a software static web site.
 
 ## Compilation and installation
 
