@@ -46,8 +46,17 @@ style:
 	sass sass/style.scss > tmpl/style.css
 
 ######
+test: $(STOG_SW_TMPL)
+	$(RM) -r testdir
+	$(MKDIR) testdir
+	./$(STOG_SW_TMPL) -d testdir
+	(cd testdir ; make test)
+	@echo "generation and compilation of test site was ok, check file:///tmp/index.html"
+
+######
 clean:
 	$(RM) *.cm* *.o *.a *.annot $(STOG_SW_TMPL) $(STOG_SW_TMPL_BYTE)
+	$(RM) -r testdir .sass-cache
 
 ##########
 install: all
