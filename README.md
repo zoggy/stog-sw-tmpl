@@ -32,6 +32,6 @@ make server  # then browse http://localhost:8080 to have a preview
              # while # modifying the generated files
 ````
 
-See [the Stog documentation](https://zoggy.github.io/stog).
+See [the Stog documentation](https://zoggy.github.io/stog/doc.html).
 
 
