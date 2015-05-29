@@ -303,8 +303,7 @@ body {
   margin-bottom: 1em; }
 
 .ocamldoc-page {
-  /*  br { height: 0 ; line-height: 0; display: none }*/
-  /*pre { margin-bottom: 4px; font-family: monospace; }*/ }
+  /*  br { height: 0 ; line-height: 0; display: none }*/ }
   .ocamldoc-page .navbar {
     background: transparent;
     margin-top: -1.5em;
@@ -353,9 +352,9 @@ body {
     border-style: hidden;
     padding: 5pt 5pt; }
   .ocamldoc-page tr {
-    background-color: White; }
+    background-color: transparent; }
   .ocamldoc-page td.typefieldcomment {
-    background-color: #FFFFFF;
+    background-color: transparent;
     font-size: smaller; }
   .ocamldoc-page div.sig_block {
     margin-left: 2em; }
@@ -371,7 +370,7 @@ body {
     font-size: 20pt;
     text-align: center; }
   .ocamldoc-page h2 {
-    font-size: 20pt;
+    font-size: 1.602em;
     border: 1px solid #000000;
     margin-top: 5px;
     margin-bottom: 2px;
@@ -379,7 +378,7 @@ body {
     background-color: #90BDFF;
     padding: 2px; }
   .ocamldoc-page h3 {
-    font-size: 20pt;
+    font-size: 1.424em;
     border: 1px solid #000000;
     margin-top: 5px;
     margin-bottom: 2px;
@@ -430,7 +429,7 @@ body {
     background-color: #FFFFFF;
     padding: 2px; }
   .ocamldoc-page a {
-    color: #416DFF;
+    color: #c22;
     text-decoration: none; }
   .ocamldoc-page a:hover {
     background-color: #ddd;
