@@ -139,7 +139,7 @@ ul {
 p + ul {
   margin-top: -10.5px; }
 
-pre, .code {
+pre, code {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
