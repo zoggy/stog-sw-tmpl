@@ -30,6 +30,7 @@ p + ul {
   margin-top: - ($base-line-height / 2) ;
 }
 pre {
+  font-family: $fixed-font-family ;
   @include border-radius(3px);
   padding-left: 0.5em;
   border-width: 0 0 0 2px;
@@ -41,7 +42,8 @@ pre {
   word-break: break-all;
   line-height: 1.5em;
 }
-code {
+code, span.icode {
+  font-family: $fixed-font-family ;
   @include border-radius(3px);
   color: $code-color ;
   background-color: $code-background ;
