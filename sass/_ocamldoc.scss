@@ -3,12 +3,17 @@ img.depgraph { border-width: 0px; }
 .keywordsign { color : #C04600 }
 .superscript { font-size : 4 }
 .subscript { font-size : 4 }
-.comment { color : Green }
+.comment, .typefieldcomment, .typefieldcomment code {
+  color : Green ;
+}
 .constructor { color : Blue }
 .type { color : #5C6585 }
 .string { color : Maroon }
 .warning { color : Red ; font-weight : bold }
 .info { margin-left : 3em; margin-right: 3em ; margin-bottom: 1.5em; }
+td.typefieldcomment .info {
+   margin : 0.1em 0.1em 0.1em 0.2em;
+}
 .param_info { margin-top: 4px;
               margin-left : 4.5em;
               margin-right : 4.5em ;
@@ -18,10 +23,15 @@ img.depgraph { border-width: 0px; }
               padding-left: 0.2em ;
             }
 .code { color : #465F91 ; }
-.typetable { border-style : hidden }
+.typetable { border-style : hidden;
+  background-color: $code-background;
+  }
 .paramstable { border-style : hidden ; padding: 5pt 5pt}
 tr { background-color : transparent }
-td.typefieldcomment { background-color : transparent ; font-size: smaller ;}
+td.typefieldcomment, td.typefieldcomment code {
+  background-color : transparent ; font-size: smaller ;
+  max-width: $page-max-width * 0.50 ;
+}
 div.sig_block {margin-left: 2em}
 *:target { background: yellow; }
 body {font: 13px sans-serif; color: black; text-align: left; padding: 5px; margin: 0}
